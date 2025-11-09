@@ -17,7 +17,7 @@ export default function ThreadHistory({ onShowGuide }: ThreadHistoryProps) {
     "chatHistoryOpen",
     parseAsBoolean.withDefault(false),
   );
-  const [threadId, setThreadId] = useQueryState("threadId");
+  const [, setThreadId] = useQueryState("threadId");
 
   const { getThreads, threads, setThreads, threadsLoading, setThreadsLoading } =
     useThreads();
@@ -33,7 +33,7 @@ export default function ThreadHistory({ onShowGuide }: ThreadHistoryProps) {
         setThreads([]); // Set empty array on error to show clean empty state
       })
       .finally(() => setThreadsLoading(false));
-  }, [getThreads]);
+  }, [getThreads, setThreads, setThreadsLoading]);
 
   const handleNewChat = () => {
     setThreadId(null);
