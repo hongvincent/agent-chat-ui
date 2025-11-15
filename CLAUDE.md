@@ -1,5 +1,7 @@
 # CLAUDE.md - Agent Chat UI Codebase Guide for AI Assistants
 
+*English | [한국어](./CLAUDE.ko.md)*
+
 This document provides comprehensive guidance for AI assistants working with the Agent Chat UI codebase. It covers architecture, conventions, patterns, and best practices.
 
 ## Table of Contents
